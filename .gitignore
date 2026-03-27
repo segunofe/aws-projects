@@ -2,8 +2,10 @@
 # Terraform core
 # =========================
 .terraform/
+**/.terraform/
 *.tfstate
 *.tfstate.*
+*.exe
 crash.log
 crash.*.log
 
