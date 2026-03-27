@@ -103,3 +103,54 @@ jobs:
       task_definition_name: ${{ env.ECS_TASK_DEFINITION_NAME }}
       ecs_cluster_name: ${{ env.ECS_CLUSTER_NAME }}
       ecs_service_name: ${{ env.ECS_SERVICE_NAME }}
+  #--------------------------------------------------------------
+  # JOB 2: Build, Scan, and Push Docker Image to ECR
+  #--------------------------------------------------------------
+  build_and_push_image:
+    name: Build, scan, and push Docker image to ECR
+    needs: deploy_aws_infrastructure
+    if: needs.deploy_aws_infrastructure.outputs.terraform_action != 'destroy' # this job should only run if the Terraform action is not destroy.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        working-directory: ./docker/nest-app
+        env:
+          # DOMAIN_NAME: ${{ needs.deploy_aws_infrastructure.outputs.domain_name }}
+          RDS_ENDPOINT: ${{ needs.deploy_aws_infrastructure.outputs.rds_endpoint }}
+          RDS_DB_PASSWORD: ${{ secrets.RDS_DB_PASSWORD }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: bash ./build-image.sh
+
+      - name: Scan Docker image for vulnerabilities
+        uses: aquasecurity/trivy-action@master # We will use a Trivy GitHub Action to scan our Docker image for vulnerabilities. Replace <TRIVY_SCAN_ACTION> with the actual action name, e.g., aquasecurity/trivy-action@v0.0.1.
+        with:
+          image-ref: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          severity: CRITICAL,HIGH
+          exit-code: ${{ env.ENVIRONMENT == 'prod' && '1' || '0' }} # Fail the build if vulnerabilities are found in production, but allow it in non-production environments.
+          format: json
+          output: trivy-report.json
+
+      - name: Generate vulnerability summary # This step processes the Trivy JSON report to count the number of critical and high vulnerabilities, and then sets a summary message in the GitHub Actions environment variable SCAN_SUMMARY. The summary will indicate whether any vulnerabilities were found and their severity.
+        run: |
+          CRITICAL=$(jq '[.Results[]?.Vulnerabilities[]? | select(.Severity=="CRITICAL")] | length' trivy-report.json)
+          HIGH=$(jq '[.Results[]?.Vulnerabilities[]? | select(.Severity=="HIGH")] | length' trivy-report.json)
+          TOTAL=$((CRITICAL + HIGH))
+
+          if [ "$TOTAL" -eq 0 ]; then
+            SUMMARY="✅ No vulnerabilities found"
+          else
+            SUMMARY="⚠️ ${TOTAL} vulnerabilities found (${CRITICAL} Critical, ${HIGH} High)"
+          fi
+
+          echo "SCAN_SUMMARY=$SUMMARY" >> $GITHUB_ENV
+          echo "$SUMMARY"
+
+      - name: Push Docker image to ECR
+        working-directory: ./docker/nest-app
+        run: bash ./push-image.sh
+
+    outputs:
+      scan_summary: ${{ env.SCAN_SUMMARY }}
