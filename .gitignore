@@ -9,6 +9,11 @@
 crash.log
 crash.*.log
 
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
 # Ignore sensitive variable files
 *.tfvars
 *.tfvars.json
