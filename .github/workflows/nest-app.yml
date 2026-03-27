@@ -35,7 +35,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: us-east-2
   AWS_ACCOUNT_ID: "851725625129"
-  TERRAFORM_ACTION: apply
+  TERRAFORM_ACTION: destroy
   PROJECT_NAME: nest
   ENVIRONMENT: dev
   # RECORD_NAME: www
@@ -87,7 +87,7 @@ jobs:
 
       # The outputs we specified in Terraform will want to export them out of Terraform and add them to our pipeline for use in other jobs.
       - name: Export Terraform outputs
-        if: env.TERRAFORM_ACTION == 'destroy' # this step should only run if the Terraform action is destroy.
+        if: env.TERRAFORM_ACTION == 'apply' # this step should only run if the Terraform action is apply.
         working-directory: ./terraform-module/nest-app
         run: |
           # echo "DOMAIN_NAME=$(terraform output -raw domain_name | cut -d ':' -f1)" >> $GITHUB_ENV
@@ -172,7 +172,7 @@ jobs:
           ECS_FAMILY: ${{ needs.deploy_aws_infrastructure.outputs.task_definition_name }}
         run: |
           CURRENT_REVISION=$(aws ecs describe-task-definition --task-definition "${ECS_FAMILY}" \
-            --query 'taskDefinition.revision' --output text)
+            --query 'taskDefinition' --output text)
           echo "CURRENT_TASK_DEFINITION_REVISION=$CURRENT_REVISION" >> $GITHUB_ENV
 
       - name: Create new task definition revision
