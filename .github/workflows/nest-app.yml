@@ -87,7 +87,7 @@ jobs:
 
       # The outputs we specified in Terraform will want to export them out of Terraform and add them to our pipeline for use in other jobs.
       - name: Export Terraform outputs
-        if: env.TERRAFORM_ACTION == 'apply' # this step should only run if the Terraform action is apply.
+        if: env.TERRAFORM_ACTION == 'destroy' # this step should only run if the Terraform action is destroy.
         working-directory: ./terraform-module/nest-app
         run: |
           # echo "DOMAIN_NAME=$(terraform output -raw domain_name | cut -d ':' -f1)" >> $GITHUB_ENV
