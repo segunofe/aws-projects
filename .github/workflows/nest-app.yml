@@ -74,21 +74,21 @@ jobs:
           terraform_version: latest
 
       - name: Run Terraform init
-        working-directory: ./terraform-modules/nest-app
+        working-directory: ./terraform-module/nest-app
         run: terraform init
 
       - name: Run Terraform plan
-        working-directory: ./terraform-modules/nest-app
+        working-directory: ./terraform-module/nest-app
         run: terraform plan -no-color # The -no-color flag is used to remove ANSI color codes from the output, making it cleaner and easier to read in CI/CD logs.
 
       - name: Run Terraform apply/destroy
-        working-directory: ./terraform-modules/nest-app
+        working-directory: ./terraform-module/nest-app
         run: terraform ${TERRAFORM_ACTION} -auto-approve
 
       # The outputs we specified in Terraform will want to export them out of Terraform and add them to our pipeline for use in other jobs.
       - name: Export Terraform outputs
         if: env.TERRAFORM_ACTION == 'apply' # this step should only run if the Terraform action is apply.
-        working-directory: ./terraform-modules/nest-app
+        working-directory: ./terraform-module/nest-app
         run: |
           # echo "DOMAIN_NAME=$(terraform output -raw domain_name | cut -d ':' -f1)" >> $GITHUB_ENV
           echo "RDS_ENDPOINT=$(terraform output -raw rds_endpoint | cut -d ':' -f1)" >> $GITHUB_ENV
