@@ -24,7 +24,7 @@ on:
     paths:
       - ".github/workflows/nest-app.yml"
       - "docker/nest-app/**"
-      - "terraform-modules/nest-app/**"
+      - "terraform-module/nest-app/**"
 
 # --------------------------------------------------------------
 # ENVIRONMENT VARIABLES: Shared across all jobs. Global variables
