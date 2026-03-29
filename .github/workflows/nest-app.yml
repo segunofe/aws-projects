@@ -178,7 +178,7 @@ jobs:
           ECS_FAMILY: ${{ needs.deploy_aws_infrastructure.outputs.task_definition_name }}
         run: |
           CURRENT_REVISION=$(aws ecs describe-task-definition --task-definition "${ECS_FAMILY}" \
-            --query 'taskDefinition' --output text)
+            --query 'taskDefinition.revision' --output text)
           echo "CURRENT_TASK_DEFINITION_REVISION=$CURRENT_REVISION" >> $GITHUB_ENV
 
       - name: Create new task definition revision
