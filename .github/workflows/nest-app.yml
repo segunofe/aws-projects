@@ -39,7 +39,7 @@ env:
   PROJECT_NAME: nest
   ENVIRONMENT: dev
   RECORD_NAME: www
-  DOMAIN_NAME: coudsdew.com
+  DOMAIN_NAME: cloudsdew.com
   GITHUB_USERNAME: segunofe
   REPOSITORY_NAME: nest-app-code # the name of repo wher the application code is located
   SERVICE_PROVIDER_FILE_NAME: AppServiceProvider # the name of the main service provider file without extension
