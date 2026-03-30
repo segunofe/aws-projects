@@ -164,6 +164,8 @@ jobs:
   # JOB 3: Create New Task Definition Revision
   # This job creates a new revision of the ECS task definition with the updated (latest) Docker image.
   # And outputs the new revision number as well as the current revision number before the update, which can be used for rollback if needed.
+  # Think of "current revision" as the revision that is currently running in production before the deployment
+  # The "new revision" as the revision that we just created with the updated image and will be deployed to production.
   #--------------------------------------------------------------
   create_task_definition_revision:
     name: Create new task definition revision
@@ -276,7 +278,7 @@ jobs:
           RUNNING_COUNT=$(aws ecs describe-services \
             --cluster "${ECS_CLUSTER_NAME}" \
             --services "${ECS_SERVICE_NAME}" \
-            --query "service[0].runningCount" \     # top or high level query to get running count
+            --query "services[0].runningCount" \     # top or high level query to get running count
             --output text)
 
           DESIRED_COUNT=$(aws ecs describe-services \
