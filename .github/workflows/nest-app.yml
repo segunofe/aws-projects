@@ -34,12 +34,12 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: us-east-2
-  AWS_ACCOUNT_ID: "851725625129"
+  AWS_ACCOUNT_ID: "xxxxxxxxxx"
   TERRAFORM_ACTION: destroy
   PROJECT_NAME: nest
   ENVIRONMENT: dev
   RECORD_NAME: www
-  DOMAIN_NAME: cloudsdew.com
+  DOMAIN_NAME: xxxxxxx.com
   GITHUB_USERNAME: segunofe
   REPOSITORY_NAME: nest-app-code # the name of repo wher the application code is located
   SERVICE_PROVIDER_FILE_NAME: AppServiceProvider # the name of the main service provider file without extension
