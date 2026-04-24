@@ -2,10 +2,13 @@ This repository contains Five (5) aws projects
 1. Containerization of a nest application using Docker
 2. Deployment to Amazon ECS
 3. Deployment to Amazon EKS
-4. Development of Terraform Module for AWS Infrastructure provisioning
+4. Development of Terraform Module for AWS Infrastructure provisioning. 
+
    The modules are in another repository. The configuration files in the folder called "terraform-module" made reference to the modules for use.
-   Here is the repo for the modules: https://github.com/segunofe/modules.git
-5. Development of CI/CD pipeline using GitHub Actions to automate and speed up deployment of an eCommerce application
+
+    Here is the repo for the modules: https://github.com/segunofe/modules.git
+
+6. Development of CI/CD pipeline using GitHub Actions to automate and speed up deployment of an eCommerce application
 
 ### For Project 5, I built a fully automated CI/CD Pipeline using GitHub Actions and Terraform Modules in AWS
 <img width="1600" height="795" alt="image" src="https://github.com/user-attachments/assets/25e6a19a-89cd-4a09-8c4b-24dd92115ae9" />
