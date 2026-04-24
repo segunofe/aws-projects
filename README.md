@@ -58,6 +58,7 @@ Lower operational costs
 ### 2. Containerized Application (Docker)
 
 Problem: Inconsistent environments causing deployment failures
+
 Solution: Lightweight, portable containers
 
 <img width="1884" height="418" alt="Screenshot 2026-03-29 170815" src="https://github.com/user-attachments/assets/ff688c9a-a01a-4757-9176-66e0569f6a45" />
@@ -71,6 +72,7 @@ Simplified scaling
 ### 3. Security Scanning with Trivy 🔐
 
 Problem: Undetected vulnerabilities can lead to security breaches in production environment 
+
 Solution: Automated scanning for High & Critical vulnerabilities
 
 ✅ Impact:
@@ -83,6 +85,7 @@ Improved compliance
 ### 4. Amazon ECR (Container Registry)
 
 Problem: Poor image management and lack of version control
+
 Solution: Secure, centralized image repository
 
 <img width="1892" height="537" alt="Screenshot 2026-03-29 215526" src="https://github.com/user-attachments/assets/70cf5744-2ab0-4507-9052-0461c2d4defe" />
@@ -97,6 +100,7 @@ Secure artifact storage
 ### 5. Deployment on Amazon ECS
 
 Problem: Complex container orchestration and scaling
+
 Solution: Managed container orchestration
 
 ✅ Impact:
@@ -108,6 +112,7 @@ Reliable service delivery
 ### 6. Application Health Checks
 
 Problem: Failed deployments go unnoticed
+
 Solution: Automated health validation post-deployment
 
 ✅ Impact:
@@ -119,6 +124,7 @@ Better user experience
 ### 7. Automated Rollback Mechanism 🔄
 
 Problem: Failed releases cause downtime and revenue loss
+
 Solution: Instant rollback to last stable version
 
 <img width="1879" height="404" alt="Screenshot 2026-03-29 173553" src="https://github.com/user-attachments/assets/43efe05f-89cf-498b-be9f-b00d675eebde" />
@@ -133,6 +139,7 @@ Protection of business revenue
 ### 8. Slack Notifications Integration
 
 Problem: Slow response to deployment issues
+
 Solution: Real-time deployment alerts via Slack
 
 <img width="1398" height="499" alt="Screenshot 2026-03-29 193236" src="https://github.com/user-attachments/assets/ad676c11-353a-4ed8-89ae-e80e26bf885b" />
