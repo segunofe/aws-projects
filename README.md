@@ -16,10 +16,9 @@ https://www.linkedin.com/feed/update/urn:li:activity:7453378469041770497/
 <img width="4050" height="4700" alt="cicd" src="https://github.com/user-attachments/assets/1f18caf7-95a1-44d9-85a2-a90ab05b2bac" />
 
 
-This project demonstrates the design and implementation of a fully automated, production-grade CI/CD pipeline for deploying containerized applications on AWS using modern DevOps practices.
+This project demonstrates the design and implementation of a fully automated, CI/CD pipeline for deploying containerized applications on AWS using modern DevOps practices.
 
 It focuses not just on tooling, but on solving real business problems such as deployment delays, downtime, security risks, and operational inefficiencies.
-
 
 ### 📌 Overview
 
