@@ -45,6 +45,7 @@ The pipeline automates the entire software delivery lifecycle:
 ### 1. Automated AWS Infrastructure Provisioning (Terraform)
 
 Problem: Manual infrastructure setup is slow and error-prone
+
 Solution: Modular Terraform configurations for automated provisioning
 <img width="1698" height="879" alt="Screenshot 2026-03-29 193047" src="https://github.com/user-attachments/assets/ff49b770-56d6-47f4-856d-d24af5596d44" />
 
