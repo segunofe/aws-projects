@@ -3,8 +3,8 @@ This repository contains Five (5) aws projects
 2. Deployment to Amazon ECS
 3. Deployment to Amazon EKS
 4. Development of Terraform Module for AWS Infrastructure provisioning
-   The modules are in another repository. The configuration files in the folder called "terraform-module" references the modules for use.
-   Here is the repo for the module: 
+   The modules are in another repository. The configuration files in the folder called "terraform-module" made reference to the modules for use.
+   Here is the repo for the modules: https://github.com/segunofe/modules.git
 5. Development of CI/CD pipeline using GitHub Actions to automate and speed up deployment of an eCommerce application
 
 For Project 5, here is a summary of what I built:
