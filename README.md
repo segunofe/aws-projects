@@ -21,7 +21,7 @@ This project demonstrates the design and implementation of a fully automated, pr
 It focuses not just on tooling, but on solving real business problems such as deployment delays, downtime, security risks, and operational inefficiencies.
 
 
-📌 Overview
+### 📌 Overview
 
 The pipeline automates the entire software delivery lifecycle:
 
@@ -32,7 +32,7 @@ The pipeline automates the entire software delivery lifecycle:
 - Monitoring and rollback
 - Real-time notifications
   
-🧱 Architecture Components
+### 🧱 Architecture Components
 - Infrastructure as Code: Terraform
 - Containerization: Docker
 - Container Registry: Amazon ECR
@@ -41,9 +41,9 @@ The pipeline automates the entire software delivery lifecycle:
 - CI/CD Automation: GitHub Actions
 - Notifications: Slack API
 
-⚙️ Key Features & Business Impact
+### ⚙️ Key Features & Business Impact
 
-1. Automated AWS Infrastructure Provisioning (Terraform)
+### 1. Automated AWS Infrastructure Provisioning (Terraform)
 
 Problem: Manual infrastructure setup is slow and error-prone
 Solution: Modular Terraform configurations for automated provisioning
@@ -55,13 +55,12 @@ Faster deployments (minutes instead of hours)
 Reduced configuration errors
 Lower operational costs
 
-2. Containerized Application (Docker)
+### 2. Containerized Application (Docker)
 
 Problem: Inconsistent environments causing deployment failures
 Solution: Lightweight, portable containers
 
 <img width="1884" height="418" alt="Screenshot 2026-03-29 170815" src="https://github.com/user-attachments/assets/ff688c9a-a01a-4757-9176-66e0569f6a45" />
-
 
 ✅ Impact:
 
@@ -69,7 +68,7 @@ Environment consistency across dev/staging/prod
 Faster and predictable deployments
 Simplified scaling
 
-3. Security Scanning with Trivy 🔐
+### 3. Security Scanning with Trivy 🔐
 
 Problem: Undetected vulnerabilities can lead to security breaches in production environment 
 Solution: Automated scanning for High & Critical vulnerabilities
@@ -81,8 +80,7 @@ Improved compliance
 
 <img width="1629" height="810" alt="Screenshot 2026-03-29 193450" src="https://github.com/user-attachments/assets/2bc34c57-48f2-4072-a63a-b4c965a0a368" />
 
-
-4. Amazon ECR (Container Registry)
+### 4. Amazon ECR (Container Registry)
 
 Problem: Poor image management and lack of version control
 Solution: Secure, centralized image repository
@@ -96,7 +94,7 @@ Version-controlled deployments
 Improved traceability
 Secure artifact storage
 
-5. Deployment on Amazon ECS
+### 5. Deployment on Amazon ECS
 
 Problem: Complex container orchestration and scaling
 Solution: Managed container orchestration
@@ -107,7 +105,7 @@ High availability and scalability
 Reduced infrastructure management overhead
 Reliable service delivery
 
-6. Application Health Checks
+### 6. Application Health Checks
 
 Problem: Failed deployments go unnoticed
 Solution: Automated health validation post-deployment
@@ -118,7 +116,7 @@ Early failure detection
 Improved uptime
 Better user experience
 
-7. Automated Rollback Mechanism 🔄
+### 7. Automated Rollback Mechanism 🔄
 
 Problem: Failed releases cause downtime and revenue loss
 Solution: Instant rollback to last stable version
@@ -132,7 +130,7 @@ Zero downtime
 Faster incident recovery
 Protection of business revenue
 
-8. Slack Notifications Integration
+### 8. Slack Notifications Integration
 
 Problem: Slow response to deployment issues
 Solution: Real-time deployment alerts via Slack
@@ -147,14 +145,14 @@ Improved team visibility
 Reduced Mean Time to Recovery (MTTR)
 📊 Business Value Summary
 
-This pipeline is designed to:
+### This pipeline is designed to:
 
 🚀 Accelerate Time-to-Market – Faster feature delivery
 🛡️ Reduce Risk – Security scanning and safe deployments
 ⚡ Improve Reliability – Health checks and automated rollback
 💰 Optimize Costs – Less manual intervention and downtime
 
-🔄 CI/CD Workflow
+### 🔄 CI/CD Workflow
 - Developer pushes code to GitHub
 - GitHub Actions triggers pipeline
 - Docker image is built
