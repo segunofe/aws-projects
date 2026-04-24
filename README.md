@@ -47,7 +47,7 @@ The pipeline automates the entire software delivery lifecycle:
 
 Problem: Manual infrastructure setup is slow and error-prone
 Solution: Modular Terraform configurations for automated provisioning
-<img width="1657" height="1085" alt="Screenshot 2026-03-25 224602" src="https://github.com/user-attachments/assets/6ca79e9f-a928-46d8-9086-297accba2f23" />
+<img width="1698" height="879" alt="Screenshot 2026-03-29 193047" src="https://github.com/user-attachments/assets/ff49b770-56d6-47f4-856d-d24af5596d44" />
 
 ✅ Impact:
 
@@ -143,12 +143,15 @@ Solution: Real-time deployment alerts via Slack
 Faster incident response
 Improved team visibility
 Reduced Mean Time to Recovery (MTTR)
-📊 Business Value Summary
+
+<img width="1657" height="1085" alt="Screenshot 2026-03-25 224602" src="https://github.com/user-attachments/assets/6ca79e9f-a928-46d8-9086-297accba2f23" />
+
+### 📊 Business Value Summary
 
 ### This pipeline is designed to:
 
 🚀 Accelerate Time-to-Market – Faster feature delivery
-🛡️ Reduce Risk – Security scanning and safe deployments
+🛡️ Reduce Risk – Security scanning 
 ⚡ Improve Reliability – Health checks and automated rollback
 💰 Optimize Costs – Less manual intervention and downtime
 
