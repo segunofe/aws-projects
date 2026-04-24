@@ -7,7 +7,7 @@ This repository contains Five (5) aws projects
    Here is the repo for the modules: https://github.com/segunofe/modules.git
 5. Development of CI/CD pipeline using GitHub Actions to automate and speed up deployment of an eCommerce application
 
-For Project 5, I built a fully automated CI/CD Pipeline using GitHub Actions and Terraform Modules in AWS
+### For Project 5, I built a fully automated CI/CD Pipeline using GitHub Actions and Terraform Modules in AWS
 <img width="1600" height="795" alt="image" src="https://github.com/user-attachments/assets/25e6a19a-89cd-4a09-8c4b-24dd92115ae9" />
 
 
@@ -19,7 +19,6 @@ https://www.linkedin.com/feed/update/urn:li:activity:7453378469041770497/
 This project demonstrates the design and implementation of a fully automated, production-grade CI/CD pipeline for deploying containerized applications on AWS using modern DevOps practices.
 
 It focuses not just on tooling, but on solving real business problems such as deployment delays, downtime, security risks, and operational inefficiencies.
-<img width="1600" height="795" alt="image" src="https://github.com/user-attachments/assets/4e1b8b55-7b6f-4f30-8055-1f3be8c20588" />
 
 
 📌 Overview
