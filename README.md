@@ -9,6 +9,5 @@ This repository contains Five (5) aws projects
 
 For Project 5, here is a summary of what I built:
 https://www.linkedin.com/feed/update/urn:li:activity:7453378469041770497/
-<img width="4050" height="4700" alt="cicd" src="https://github.com/user-attachments/assets/1f18caf7-95a1-44d9-85a2-a90ab05b2bac" />
-
 <img width="2181" height="1309" alt="ECSArchiDiagram drawio" src="https://github.com/user-attachments/assets/e89a3588-fa3e-4c64-a0d5-98fc7adfaa23" />
+<img width="4050" height="4700" alt="cicd" src="https://github.com/user-attachments/assets/1f18caf7-95a1-44d9-85a2-a90ab05b2bac" />
