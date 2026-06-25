@@ -156,7 +156,7 @@ Reduced Mean Time to Recovery (MTTR)
 
 <img width="1657" height="1085" alt="Screenshot 2026-03-25 224602" src="https://github.com/user-attachments/assets/6ca79e9f-a928-46d8-9086-297accba2f23" />
 
-### 📊 Business Value Summary
+### 📊 * Business Value Summary *
 
 ### This pipeline is designed to:
 
